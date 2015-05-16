@@ -1,1 +1,1 @@
-web: cd node_modules/mongo-express && node app
+web: cd node_modules/mongo-express && cp config.default.js config.js && node app
