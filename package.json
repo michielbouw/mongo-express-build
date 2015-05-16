@@ -1,0 +1,18 @@
+﻿{
+  "name": "mongo-express-build",
+  "description": "Setup mongo-express mongoDB UI on server",
+  "version": "0.0.1",
+  "author": "Michiel Bouw <mpbouw94@gmail.com>",
+  "contributors": [
+    "Michiel Bouw <mpbouw94@gmail.com>"
+  ],
+  "private": true,
+  "main": "node-modules/mongo-express/app.js",
+  "dependencies": {
+    "mongo-express": "0.20.0"
+  },
+  "engines": {
+    "node": ">=0.10.28 <0.11",
+    "npm": ">=1.4.28 <1.5"
+  }
+}

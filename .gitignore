@@ -1,0 +1,8 @@
+.vagrant/
+.idea/
+.bower-cache/
+.bower-registry/
+.bower-tmp/
+bower_components/
+node_modules/
+public/

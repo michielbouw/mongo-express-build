@@ -1,0 +1,1 @@
+web: cd node_modules/mongo-express && node app
