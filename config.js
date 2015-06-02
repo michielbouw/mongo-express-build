@@ -1,7 +1,11 @@
 module.exports = {
   mongodb: {
-    server: 'localhost',
-    port: 27017,
+    //server: 'localhost',
+    //port: 27017,
+	server: 'process.env.MONGODB_HOST',
+	port: 'process.env.MONGODB_PORT',
+	adminUsername: 'process.end.MONGODB_USERNAME',
+    adminPassword: 'process.end.MONGODB_PASSWORD',
 
     //autoReconnect: automatically reconnect if connection is lost
     autoReconnect: true,
@@ -32,8 +36,8 @@ module.exports = {
     //  >>>>  Using an admin account allows you to view and edit all databases, and view stats
 
     //leave username and password empty if no admin account exists
-    adminUsername: '',
-    adminPassword: '',
+    //adminUsername: '',
+    //adminPassword: '',
     //whitelist: hide all databases except the ones in this list  (empty list for no whitelist)
     whitelist: [],
     //blacklist: hide databases listed in the blacklist (empty list for no blacklist)
