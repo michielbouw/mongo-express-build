@@ -2,9 +2,9 @@ module.exports = {
   mongodb: {
     //server: 'localhost',
     //port: 27017,
-	server: 'process.env.MONGODB_HOST',
-	port: 'process.env.MONGODB_PORT',
-	dbname: 'process.env.MONGODB_DATABASE',
+	server: process.env.MONGODB_HOST,
+	port: process.env.MONGODB_PORT,
+	dbname: process.env.MONGODB_DATABASE,
 	
     //autoReconnect: automatically reconnect if connection is lost
     autoReconnect: true,
@@ -24,9 +24,9 @@ module.exports = {
        * Add as many databases as you want!
 	   */
       {
-        database: 'process.env.MONGODB_DATABASE',
-        username: 'process.env.MONGODB_USERNAME',
-        password: 'process.env.MONGODB_PASSWORD'
+        database: process.env.MONGODB_DATABASE,
+        username: process.env.MONGODB_USERNAME,
+        password: process.env.MONGODB_PASSWORD
       }
       
     ],
