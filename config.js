@@ -14,7 +14,7 @@ module.exports = {
     //set admin to true if you want to turn on admin features
     //if admin is true, the auth list below will be ignored
     //if admin is true, you will need to enter an admin username/password below (if it is needed)
-    admin: true,
+    admin: false,
 
 
     // >>>>  If you are using regular accounts, fill out auth details in the section below
@@ -23,12 +23,13 @@ module.exports = {
       /*
        * Add the the name, the username, and the password of the databases you want to connect to
        * Add as many databases as you want!
+	   */
       {
-        database: 'test',
-        username: 'user',
-        password: 'pass'
+        database: 'process.env.MONGODB_DATABASE',
+        username: 'process.env.MONGODB_USERNAME',
+        password: 'process.env.MONGODB_PASSWORD'
       }
-      */
+      
     ],
 
 

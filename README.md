@@ -15,8 +15,8 @@ git push mongo-express master
 ### If necessairy link your mongo container to this container
 
 ````shell
-dokku mongodb:link <app> <database> 
+dokku mongodb:link <app> <database>
 ````
 
 ### Done
-Your mongo DB is now availible on <ip_address_of_droplet>:8081.
+Your mongo DB is now availible on <ip_address_of_droplet>:8081
