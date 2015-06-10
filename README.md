@@ -8,8 +8,8 @@ And check the settings for connecting the mongoDB in the 'config.js' file.
 ### Push these files to Dokku to create a container
 
 ````shell
-git remote add dokku dokku@<ip_address_of_droplet>:<app_name>
-git push dokku master
+git remote add mongo-express dokku@<ip_address_of_droplet>:<app_name>
+git push mongo-express master
 ````
 
 ### If necessairy link your mongo container to this container
