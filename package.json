@@ -7,7 +7,7 @@
   "engines": {
     "node": "0.12.x",
     "npm": "2.1.x"
-  }
+  },
   "name": "mongo-express",
   "description": "Web-based admin interface for MongoDB",
   "version": "0.20.0",
