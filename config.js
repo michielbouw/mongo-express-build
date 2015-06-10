@@ -13,7 +13,7 @@ module.exports = {
     //set admin to true if you want to turn on admin features
     //if admin is true, the auth list below will be ignored
     //if admin is true, you will need to enter an admin username/password below (if it is needed)
-    admin: false,
+    admin: true,
 
 
     // >>>>  If you are using regular accounts, fill out auth details in the section below
@@ -36,10 +36,10 @@ module.exports = {
     //  >>>>  Using an admin account allows you to view and edit all databases, and view stats
 
     //leave username and password empty if no admin account exists
-    adminUsername: '',
-    adminPassword: '',
-	//adminUsername: 'process.env.MONGODB_USERNAME',
-    //adminPassword: 'process.env.MONGODB_PASSWORD',
+    //adminUsername: '',
+    //adminPassword: '',
+	adminUsername: 'process.env.MONGODB_USERNAME',
+    adminPassword: 'process.env.MONGODB_PASSWORD',
     //whitelist: hide all databases except the ones in this list  (empty list for no whitelist)
     whitelist: [],
     //blacklist: hide databases listed in the blacklist (empty list for no blacklist)
