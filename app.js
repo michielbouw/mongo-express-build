@@ -56,7 +56,7 @@ var dbOptions = {
   auto_reconnect: config.mongodb.autoReconnect,
   poolSize: config.mongodb.poolSize
 };
-var db = new mongodb.Db(dbname, new mongodb.Server(host, port, dbOptions));
+var db = new mongodb.Db('web3-production-production', new mongodb.Server(host, port, dbOptions));
 
 
 var connections = {};
