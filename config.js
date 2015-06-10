@@ -4,8 +4,8 @@ module.exports = {
     //port: 27017,
 	server: 'process.env.MONGODB_HOST',
 	port: 'process.env.MONGODB_PORT',
-	adminUsername: 'process.end.MONGODB_USERNAME',
-    adminPassword: 'process.end.MONGODB_PASSWORD',
+	adminUsername: 'process.env.MONGODB_USERNAME',
+    adminPassword: 'process.env.MONGODB_PASSWORD',
 
     //autoReconnect: automatically reconnect if connection is lost
     autoReconnect: true,

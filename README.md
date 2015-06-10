@@ -1,4 +1,4 @@
-## MongoDB UI setup
+## MongoDB UI setup on dokku
 
 From Mongo express: https://github.com/andzdroid/mongo-express
 
@@ -12,14 +12,11 @@ git remote add dokku dokku@<ip_address_of_droplet>:<app_name>
 git push dokku master
 ````
 
-### Run
+### If necessairy link your mongo container to this container
 
 ````shell
-node app
+dokku mongodb:link <app> <database> 
 ````
 
 ### Done
-Your mongo DB is now availible on localhost:8081.
-
-
-
+Your mongo DB is now availible on <ip_address_of_droplet>:8081.
