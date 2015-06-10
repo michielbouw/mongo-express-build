@@ -55,7 +55,7 @@ var dbOptions = {
   auto_reconnect: config.mongodb.autoReconnect,
   poolSize: config.mongodb.poolSize
 };
-var db = new mongodb.Db('local', new mongodb.Server(host, port, dbOptions));
+var db = new mongodb.Db(config.mongodb.dbname, new mongodb.Server(host, port, dbOptions));
 
 
 var connections = {};
