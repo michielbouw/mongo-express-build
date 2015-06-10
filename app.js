@@ -51,11 +51,12 @@ app.configure('development', function(){
 //Set up database stuff
 var host = config.mongodb.server || 'localhost';
 var port = config.mongodb.port || mongodb.Connection.DEFAULT_PORT;
+var dbname = config.mongodb.dbname || 'local';
 var dbOptions = {
   auto_reconnect: config.mongodb.autoReconnect,
   poolSize: config.mongodb.poolSize
 };
-var db = new mongodb.Db(config.mongodb.dbname, new mongodb.Server(host, port, dbOptions));
+var db = new mongodb.Db(dbname, new mongodb.Server(host, port, dbOptions));
 
 
 var connections = {};
