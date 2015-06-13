@@ -35,7 +35,6 @@ Object.keys(swigFilters).forEach(function (name) {
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 app.set('view options', {layout: false});
-app.use(favicon());
 app.use(morgan('combined'));
 app.use(config.site.baseUrl,express.static(__dirname + '/public'));  
 app.use(bodyParser());
