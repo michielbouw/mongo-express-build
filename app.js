@@ -34,13 +34,13 @@ app.set('view options', {layout: false});
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(config.site.baseUrl,express.static(__dirname + '/public'));  
-app.use(express.bodyParser());
+app.use(bodyParser());
 app.use(express.cookieParser(config.site.cookieSecret));
 app.use(express.session({ 
 secret: config.site.sessionSecret,
 key: config.site.cookieKeyName
 }));
-app.use(express.methodOverride());
+app.use(methodOverride());
 app.use(app.router);
 
 app.use(express.errorHandler());
