@@ -49,7 +49,7 @@ module.exports = {
     //baseUrl: the URL that mongo express will be located at
     //Remember to add the forward slash at the end!
     baseUrl: '/',
-    port: 8081,
+    port: process.env.PORT || 8081,
     cookieSecret: 'cookiesecret',
     sessionSecret: 'sessionsecret',
     cookieKeyName: 'mongo-express'
