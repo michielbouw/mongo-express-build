@@ -14,7 +14,6 @@ var bodyParser     = require('body-parser');
 var morgan         = require("morgan");
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-var favicon = require('serve-favicon');
 
 var mongodb = require('mongodb');
 var cons = require('consolidate');
