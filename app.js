@@ -11,6 +11,9 @@ var async = require('async');
 var utils = require('./utils');
 var methodOverride = require('method-override');
 var bodyParser     = require('body-parser');
+var morgan         = require("morgan");
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 
 var mongodb = require('mongodb');
 var cons = require('consolidate');
@@ -31,12 +34,12 @@ Object.keys(swigFilters).forEach(function (name) {
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 app.set('view options', {layout: false});
-app.use(express.favicon());
-app.use(express.logger('dev'));
+app.use(favicon());
+app.use(morgan('combined'));
 app.use(config.site.baseUrl,express.static(__dirname + '/public'));  
 app.use(bodyParser());
-app.use(express.cookieParser(config.site.cookieSecret));
-app.use(express.session({ 
+app.use(cookieParser(config.site.cookieSecret));
+app.use(session({ 
 secret: config.site.sessionSecret,
 key: config.site.cookieKeyName
 }));
