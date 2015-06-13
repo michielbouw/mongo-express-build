@@ -19,4 +19,4 @@ dokku mongodb:link <app> <database>
 ````
 
 ### Done
-Your mongo DB is now availible on <ip_address_of_droplet>:8081
+Your mongo DB is now availible on <ip_address_of_droplet> or mongo-express.<url>
