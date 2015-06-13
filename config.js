@@ -22,13 +22,13 @@ module.exports = {
       /*
        * Add the the name, the username, and the password of the databases you want to connect to
        * Add as many databases as you want!
-	   
+	   */
       {
         database: process.env.MONGODB_DATABASE,
         username: process.env.MONGODB_USERNAME,
         password: process.env.MONGODB_PASSWORD
       }
-	  */
+	  
       
     ],
 
