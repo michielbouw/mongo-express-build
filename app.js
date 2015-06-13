@@ -10,6 +10,7 @@ var _ = require('underscore');
 var async = require('async');
 var utils = require('./utils');
 var methodOverride = require('method-override');
+var bodyParser     = require('body-parser');
 
 var mongodb = require('mongodb');
 var cons = require('consolidate');
