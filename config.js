@@ -39,8 +39,8 @@ module.exports = {
     //leave username and password empty if no admin account exists
     //adminUsername: '',
     //adminPassword: '',
-	adminUsername: 'process.env.MONGODB_USERNAME',
-    adminPassword: 'process.env.MONGODB_PASSWORD',
+	adminUsername: process.env.MONGODB_USERNAME,
+    adminPassword: process.env.MONGODB_PASSWORD,
     //whitelist: hide all databases except the ones in this list  (empty list for no whitelist)
     whitelist: [],
     //blacklist: hide databases listed in the blacklist (empty list for no blacklist)
