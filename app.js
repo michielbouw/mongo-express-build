@@ -9,6 +9,7 @@ var express = require('express')
 var _ = require('underscore');
 var async = require('async');
 var utils = require('./utils');
+var methodOverride = require('method-override');
 
 var mongodb = require('mongodb');
 var cons = require('consolidate');
@@ -26,26 +27,22 @@ Object.keys(swigFilters).forEach(function (name) {
 });
 
 //App configuration
-app.configure(function(){
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'html');
-  app.set('view options', {layout: false});
-  app.use(express.favicon());
-  app.use(express.logger('dev'));
-  app.use(config.site.baseUrl,express.static(__dirname + '/public'));  
-  app.use(express.bodyParser());
-  app.use(express.cookieParser(config.site.cookieSecret));
-  app.use(express.session({ 
-    secret: config.site.sessionSecret,
-    key: config.site.cookieKeyName
-  }));
-  app.use(express.methodOverride());
-  app.use(app.router);
-});
+app.set('views', __dirname + '/views');
+app.set('view engine', 'html');
+app.set('view options', {layout: false});
+app.use(express.favicon());
+app.use(express.logger('dev'));
+app.use(config.site.baseUrl,express.static(__dirname + '/public'));  
+app.use(express.bodyParser());
+app.use(express.cookieParser(config.site.cookieSecret));
+app.use(express.session({ 
+secret: config.site.sessionSecret,
+key: config.site.cookieKeyName
+}));
+app.use(express.methodOverride());
+app.use(app.router);
 
-app.configure('development', function(){
-  app.use(express.errorHandler());
-});
+app.use(express.errorHandler());
 
 
 //Set up database stuff
@@ -298,12 +295,12 @@ app.get(config.site.baseUrl+'db/:database/export/:collection', middleware, route
 
 app.get(config.site.baseUrl+'db/:database/:collection/:document', middleware, routes.viewDocument);
 app.put(config.site.baseUrl+'db/:database/:collection/:document', middleware, routes.updateDocument);
-app.del(config.site.baseUrl+'db/:database/:collection/:document', middleware, routes.deleteDocument);
+app.delete(config.site.baseUrl+'db/:database/:collection/:document', middleware, routes.deleteDocument);
 app.post(config.site.baseUrl+'db/:database/:collection', middleware, routes.addDocument);
 
 app.get(config.site.baseUrl+'db/:database/:collection', middleware, routes.viewCollection);
 app.put(config.site.baseUrl+'db/:database/:collection', middleware, routes.renameCollection);
-app.del(config.site.baseUrl+'db/:database/:collection', middleware, routes.deleteCollection);
+app.delete(config.site.baseUrl+'db/:database/:collection', middleware, routes.deleteCollection);
 app.post(config.site.baseUrl+'db/:database', middleware, routes.addCollection);
 
 app.get(config.site.baseUrl+'db/:database', middleware, routes.viewDatabase);
