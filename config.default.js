@@ -32,22 +32,30 @@ module.exports = {
     //  >>>>  Using an admin account allows you to view and edit all databases, and view stats
 
     //leave username and password empty if no admin account exists
-    adminUsername: 'admin',
-    adminPassword: 'pass',
+    adminUsername: '',
+    adminPassword: '',
     //whitelist: hide all databases except the ones in this list  (empty list for no whitelist)
     whitelist: [],
     //blacklist: hide databases listed in the blacklist (empty list for no blacklist)
     blacklist: []
   },
+
   site: {
-    //baseUrl: the URL that mongo express will be located at
-    //Remember to add the forward slash at the end!
-    baseUrl: '/',
     port: 8081,
     cookieSecret: 'cookiesecret',
     sessionSecret: 'sessionsecret',
     cookieKeyName: 'mongo-express'
   },
+
+  //set ifBasicAuth to true if you want to basicAuth before login mongo-express
+  //if admin is false, the basicAuthInfo list below will be ignored
+  useBasicAuth: true,
+
+  basicAuth: {
+    username: 'admin',
+    password: 'pass'
+  },
+
   options: {
     //documentsPerPage: how many documents you want to see at once in collection view
     documentsPerPage: 10,
